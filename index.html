@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="wizardApp">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<title>Multi-Step Wizard using Angular 1 And UI-Router 1 by Cathy Wun</title>
+
+	<!-- CSS Files -->
+    <link rel="icon" type="image/png" href="content/images/favicon.ico" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	
+    <!-- Fonts and Icons -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="content/css/riliwan-rabo.css" />
+    <link rel="stylesheet" href="content/css/style.css" />
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <!-- views will be injected here -->
+    <section style="background:#efefe9;">
+        <div class="container">
+            <div ui-view></div>
+        </div>
+        
+    </section>
+
+    <!-- Vendor js libraries -->
+    <!-- load angular, nganimate, and ui-router -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-beta.3/angular-ui-router.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.min.js"></script>
+    
+    <!-- Bootstrapping -->
+    <script src="app/app.module.js"></script>
+
+    <!-- Wizard - Root View -->
+    <script src="app/form/form.component.js"></script>
+    <script src="app/form/form.controller.js"></script>
+
+    <!-- Wizard - Personal feature -->
+    <script src="app/personal/personal.component.js"></script>
+    <script src="app/personal/personal.controller.js"></script>
+
+    <!-- Wizard - Work feature -->
+    <script src="app/work/work.component.js"></script>
+    <script src="app/work/work.controller.js"></script>
+
+    <!-- Wizard - Address feature -->
+    <script src="app/address/address.component.js"></script>
+    <script src="app/address/address.controller.js"></script>
+
+    <!-- Wizard - Result feature -->
+    <script src="app/result/result.component.js"></script>
+    <script src="app/result/result.controller.js"></script>
+
+</body>
+</html>
