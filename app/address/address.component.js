@@ -7,11 +7,12 @@
             templateUrl:  'app/address/address.html',
             controller: 'AddressController',
             controllerAs: 'vm',
-            transclude: true,
             require: {
-                root: '^formComponent'
+                // access to the functionality of the parent component called 'formComponent'
+                parent: '^formComponent'
             },
             bindings: {
+                // send a changeset of 'formData' upwards to the parent component called 'formComponent'
                 formData: '<'
             }
         })

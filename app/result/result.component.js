@@ -7,12 +7,9 @@
             templateUrl:  'app/result/result.html',
             controller: 'ResultController',
             controllerAs: 'vm',
-            transclude: true,
             require: {
-                root: '^formComponent'
-            },
-            bindings: {
-                formData: '<'
+                // access to the functionality of the parent component called 'formComponent'
+                parent: '^formComponent'
             }
         })
 })();

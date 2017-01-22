@@ -1,9 +1,9 @@
 (function() {
     'use strict';
 
-    // Creating our angular app and inject ngAnimate, ui-router 
+    // Creating our angular app and inject ui-router 
     // =============================================================================
-    var app = angular.module('wizardApp', ['ngAnimate', 'ui.router'])
+    var app = angular.module('wizardApp', ['ui.router'])
 
     // Configuring our states 
     // =============================================================================
@@ -15,33 +15,32 @@
             $urlRouterProvider.otherwise('/form/personal');
     
             $stateProvider
-                // route to show our basic wizard (/form)
+                // PARENT STATE: form state
                 .state('form', {
                     url: '/form',
                     component: 'formComponent'
                 })
         
-                // nested states 
-                // each of these sections will have their own view
-                // url will be nested (/form/personal)
+                // NESTED STATES: child states of 'form' state 
+                // URL will become '/form/personal'
                 .state('form.personal', {
                     url: '/personal',
                     component: 'personalComponent'
                 })
         
-                // url will be /form/work
+                // URL will become /form/work
                 .state('form.work', {
                     url: '/work',
                     component: 'workComponent'
                 })
         
-                // url will be /form/address
+                // URL will become /form/address
                 .state('form.address', {
                     url: '/address',
                     component: 'addressComponent'
                 })
 
-                // url will be /form/result
+                // URL will become /form/result
                 .state('form.result', {
                     url: '/result',
                     component: 'resultComponent'

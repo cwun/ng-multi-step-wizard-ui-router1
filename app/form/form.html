@@ -1,9 +1,11 @@
 <div class="row">
     <div class="board">
+        <!-- Circular Tab Area -->
         <div class="board-inner" id="status-buttons">
             <ul class="nav nav-tabs" id="myTab">
                 <div class="liner"></div>
                 
+                <!-- circular user icon -->
                 <li>
                     <a ui-sref-active="active" ui-sref=".personal" data-toggle="tab" title="personal">
                         <span class="round-tabs one">
@@ -12,6 +14,7 @@
                     </a>
                 </li>
 
+                <!-- circular tasks icon -->
                 <li>
                     <a ui-sref-active="active" ui-sref=".work" data-toggle="tab" title="work">
                         <span class="round-tabs two">
@@ -20,6 +23,7 @@
                     </a>
                 </li>
 
+                <!-- circular home icon -->
                 <li>
                     <a ui-sref-active="active" ui-sref=".address" data-toggle="tab" title="address">
                         <span class="round-tabs three">
@@ -28,8 +32,9 @@
                     </a>
                 </li>
 
+                <!-- circular ok icon -->
                 <li>
-                    <a ui-sref-active="active" ui-sref=".result" data-toggle="tab" title="completed">
+                    <a ui-sref-active="active" ui-sref=".result" data-toggle="tab" title="result">
                         <span class="round-tabs four">
                             <i class="glyphicon glyphicon-ok"></i>
                         </span>
@@ -37,19 +42,19 @@
                 </li>
             
             </ul>
-
             <div class="clearfix"></div>
-
         </div>
+        <!-- End Circular Tab Area -->
 
+        <!-- Content Area -->
         <div class="tab-content">
+            <!-- Nested view  -->
             <div ui-view></div>
         </div>
+        <!-- End Content Area -->
     </div>
 
-    <!-- show our formData as it is being typed -->
-    <pre>
-        {{ vm.formData }}
-    </pre>
+    <!-- For Debugging: show our formData as it is being typed -->
+    <pre>{{ vm.formData | json }}</pre>
 </div>
 

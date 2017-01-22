@@ -9,7 +9,7 @@
  
     function ResultController() {
         var vm = this;
-        vm.title = 'Result';
+        vm.title = 'Thanks for staying tuned!';
         vm.formData = {};
         
         vm.$onInit = activate;
@@ -17,8 +17,9 @@
         ////////////////
 
         function activate() {
-            console.log(vm.title + ' loaded!');
-            vm.formData = vm.root.getData();
+            // get data from the parent component
+            vm.formData = vm.parent.getData();
+            console.log('Result feature loaded!');
         }
     }
 })();

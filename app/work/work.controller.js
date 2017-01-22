@@ -9,7 +9,7 @@
  
     function WorkController() {
         var vm = this;
-        vm.title = 'Work';
+        vm.title = 'What do you do?';
         vm.formData = {};
         
         vm.$onInit = activate;
@@ -17,8 +17,9 @@
         ////////////////
 
         function activate() {
-            console.log(vm.title + ' loaded!');
-            vm.formData = vm.root.getData();
+            // get data from the parent component
+            vm.formData = vm.parent.getData();
+            console.log('Work feature loaded!');
         }
     }
 })();

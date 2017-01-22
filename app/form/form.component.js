@@ -6,7 +6,6 @@
         .component('formComponent', {
             templateUrl:  'app/form/form.html',
             controller: 'FormController',
-            controllerAs: 'vm',
-            transclude: true
+            controllerAs: 'vm'
         })
 })();
